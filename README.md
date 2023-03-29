@@ -2,8 +2,8 @@
 
 [JOperate](https://www.jiguang.cn) 极光官方支持的 Hbuilder 插件（Android & iOS）。是基于 HBuilder 提供的 [uni-app 原生插件扩展](https://nativesupport.dcloud.net.cn/NativePlugin/README) 进而开发出的推送插件。
 
-支持 iOS 和 Android。
-
+iOS支持的最低版本为 iOS11.0 。
+Android支持的最低版本为 minSdkVersion 19 。
 
 ## 接入
 
@@ -12,6 +12,7 @@
 - 1.将 nativeplugins/JG-JOperate、JG-JCore 导入项目对应位置。
 - 2.项目 manifest.json 中接入 JG-JOperate、JG-JCore 插件，并配置插件配置。
 - 3.在项目中引用插件
+
 ```
 const operateMofule = uni.requireNativePlugin('JG-JOperate');
 ```
@@ -51,6 +52,8 @@ JG-JOperate 中请配置
 
 ## API
 
+[API文档](https://github.com/jiguang-official/joperate-uniapp-plugin/blob/main/doc/API.md)
+
 ## 参考资料
 
 [官方文档](https://docs.jiguang.cn/public_service/client)
@@ -58,5 +61,7 @@ JG-JOperate 中请配置
 ## Licensejoperate
 
 MIT © [JIGUANG](/license)
+
+
 
 
