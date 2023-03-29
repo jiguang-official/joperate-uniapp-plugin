@@ -1,0 +1,75 @@
+{
+    "name": "JG-JOperate",
+    "id": "JG-JOperate",
+    "version": "1.0.0",
+    "description": "JOperate Hbuilder plugin",
+    "_dp_type":"nativeplugin",
+    "_dp_nativeplugin":{
+        "ios": {
+            "plugins": [{
+                "type": "module",
+                "name": "JG-JOperate",
+                "class": "JOperateModule"
+            }],
+            "hooksClass": "JOperateProxy",
+            "integrateType": "framework",
+            "deploymentTarget": "11.0",
+			"validArchitectures": [    
+			    "arm64"
+			],
+            "frameworks": [
+				"CoreLocation.framework",
+                "CFNetwork.framework",
+                "CoreFoundation.framework",
+				"libresolv.tbd",
+				"libz.tbd",
+				"libc++.1.tbd",
+                "CoreTelephony.framework",
+                "SystemConfiguration.framework",
+				"Security.framework",
+                "CoreGraphics.framework",
+                "Foundation.framework",
+                "UIKit.framework"
+            ],
+            "resources": [
+                
+            ],
+            "capabilities": {
+            
+            },
+            "parameters": {
+                "JOPERATE_ISPRODUCTION_IOS": {
+                    "des": "[iOS]是否是生产环境，是填true，不是填false或者不填",
+                    "key": "JOperate:ISPRODUCTION"
+                },
+                "JOPERATE_ADVERTISINGID_IOS": {
+                    "des": "[iOS]广告标识符（IDFA）如果不需要使用IDFA，可不填",
+                    "key": "JOperate:ADVERTISINGID"
+                }
+            }
+        },
+        "android": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "JG-JOperate",
+                    "class": "cn.jiguang.uniplugin_joperate.JOperateModule"
+                }
+            ],
+            "integrateType": "aar",
+            "minSdkVersion": "19",
+            "permissions": [
+				"${applicationId}.permission.JOPERATE_MESSAGE",
+				"android.permission.ACCESS_FINE_LOCATION",
+				"android.permission.ACCESS_COARSE_LOCATION",
+				"android.permission.READ_PHONE_STATE",
+                "android.permission.INTERNET",
+				"android.permission.ACCESS_WIFI_STATE",
+                "android.permission.ACCESS_NETWORK_STATE"
+            ],
+            "parameters": {
+                
+            }
+        }
+    }
+}
