@@ -17,6 +17,20 @@ Android支持的最低版本为 minSdkVersion 19 。
 const operateMofule = uni.requireNativePlugin('JG-JOperate');
 ```
 
+- 4.调用初始化接口
+
+```
+operateModule.initJOperateService()
+```
+
+- 5.验证集成结果
+
+调用 operateModule.CUID(), 返回有值，则代表集成成功。
+
+```
+let cuid = operateModule.CUID()
+```
+
 
 ## DEMO 体验
 按照以下步骤快速体验 JOperate_Hbuilder_Demo：
