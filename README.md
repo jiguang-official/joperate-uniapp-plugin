@@ -7,7 +7,7 @@ Android支持的最低版本为 minSdkVersion 19 。
 
 ## 接入
 
-请配合 JG-JCore 插件一起使用。
+请配合 JG-JCore 插件一起使用。JG-JCore 最低要求 1.1.2 版本。
 
 - 1.将 nativeplugins/JG-JOperate、JG-JCore 导入项目对应位置。
 - 2.项目 manifest.json 中接入 JG-JOperate、JG-JCore 插件，并配置插件配置。
@@ -34,7 +34,7 @@ let cuid = operateModule.CUID()
 
 ## DEMO 体验
 按照以下步骤快速体验 JOperate_Hbuilder_Demo：
-- 1.在[Jiguang Portal](https://www.jiguang.cn)注册应用并开通智能运营功能。
+- 1.在[Jiguang Portal](https://www.jiguang.cn)注册应用并开通极光分析功能。
 - 2.在项目 manifest.json 中配置您的appkey等信息
 - 3.HbuilderX 中制作打包自定义基座，包名，签名，bundleID 需要与对应 appkey 配置的应用信息保持一致
 - 4.HbuilderX 使用自定义基座运行即可
