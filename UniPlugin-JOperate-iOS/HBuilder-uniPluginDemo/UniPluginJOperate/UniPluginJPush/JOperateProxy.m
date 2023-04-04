@@ -7,6 +7,7 @@
 
 #import "JOperateProxy.h"
 #import "JOPERATEService.h"
+#import "JOperateModule.h"
 
 
 @implementation JOperateProxy
@@ -23,12 +24,18 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    [JOPERATEService openDebugMode:url];
+    NSLog(@"UniPluginProtocol Func: %@,%s",self,__func__);
+    if ([JOperateModule dataDebugMode]) {
+        [JOPERATEService openDebugMode:url];
+    }
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
-    [JOPERATEService openDebugMode:userActivity.webpageURL];
+    NSLog(@"UniPluginProtocol Func: %@,%s",self,__func__);
+    if ([JOperateModule dataDebugMode]) {
+        [JOPERATEService openDebugMode:userActivity.webpageURL];
+    }
     return YES;
 }
 

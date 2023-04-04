@@ -51,7 +51,8 @@
             },
             /* ios打包配置 */
             "ios" : {
-                "dSYMs" : false
+                "dSYMs" : false,
+                "urltypes" : "joperateios"
             },
             /* SDK配置 */
             "sdkConfigs" : {

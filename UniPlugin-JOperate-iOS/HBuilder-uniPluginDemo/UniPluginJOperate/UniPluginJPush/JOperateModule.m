@@ -27,10 +27,12 @@
 @implementation JOperateModule
 
 BOOL joperate_debugMode = NO;
+BOOL joperate_dataDebugMode = NO;
 
 
 UNI_EXPORT_METHOD(@selector(initJOperateService))
 UNI_EXPORT_METHOD(@selector(setLoggerEnable:))
+UNI_EXPORT_METHOD(@selector(openDebugMode:))
 UNI_EXPORT_METHOD(@selector(eventRecord:property:))
 UNI_EXPORT_METHOD(@selector(setUserChannel:callBack:))
 UNI_EXPORT_METHOD(@selector(identifyAccount:callBack:))
@@ -78,7 +80,7 @@ UNI_EXPORT_METHOD(@selector(appInfo:))
 }
 
 
-/// 设置调试模式，默认关闭状态
+/// 设置调试模式，默认关闭状态，， 设置是否打印sdk产生的Debug级log信息, 默认为NO(不打印log)
 - (void)setLoggerEnable:(BOOL)enable {
     [self logger:@"setLoggerEnable:" log:(enable?@"true":@"false")];
     joperate_debugMode = enable;
@@ -87,6 +89,16 @@ UNI_EXPORT_METHOD(@selector(appInfo:))
     }else {
         [JOPERATEService setDebug:NO];
     }
+}
+
+/// 数据校验模式 ---- 进入debug模式
+- (void)openDebugMode:(BOOL)enable {
+    [self logger:@"openDebugMode" log:(enable?@"true":@"false")];
+    joperate_dataDebugMode = enable;
+}
+
++ (BOOL)dataDebugMode {
+    return joperate_dataDebugMode;
 }
 
 /// 自定义事件统计

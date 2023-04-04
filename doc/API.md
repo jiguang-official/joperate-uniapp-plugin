@@ -546,6 +546,29 @@ if(uni.getSystemInfoSync().platform == "ios"){
 ```
 
 
+## 数据校验模式Debug (仅iOS)
+
+### API - openDebugMode(Boolean)
+
+该接口在正式环境，请不要调用。
+
+开启 数据校验模式 模式，默认是关闭。
+
+帮助开发者或者运营同学查看已经设置好的数据统计是否成功。
+
+#### 参数说明
+- true - 开启，false - 关闭
+
+
+#### 示例
+
+```javascript
+
+   operateModule.openDebugMode(true)
+				
+```
+
+
 ## 查看上报外围字段 (仅 Android)
 
 ### API - getPeripheralProperty()

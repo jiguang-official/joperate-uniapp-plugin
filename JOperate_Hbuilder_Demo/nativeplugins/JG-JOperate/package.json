@@ -1,7 +1,7 @@
 {
     "name": "JG-JOperate",
     "id": "JG-JOperate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "JOperate Hbuilder plugin",
     "_dp_type":"nativeplugin",
     "_dp_nativeplugin":{

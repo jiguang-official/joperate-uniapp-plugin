@@ -2,20 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>JOperate</key>
-	<dict>
-		<key>ISPRODUCTION</key>
-		<string></string>
-		<key>ADVERTISINGID</key>
-		<string></string>
-	</dict>
-	<key>JCore</key>
-	<dict>
-		<key>APP_KEY</key>
-		<string>0c3de43c6a6b68c9f4261b06</string>
-		<key>CHANNEL</key>
-		<string>test</string>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -84,6 +70,14 @@
 				<string>wb3721101999</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>joperateios</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>20503</string>
@@ -91,6 +85,20 @@
 	<string>13453452345</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>JCore</key>
+	<dict>
+		<key>APP_KEY</key>
+		<string>0c3de43c6a6b68c9f4261b06</string>
+		<key>CHANNEL</key>
+		<string>test</string>
+	</dict>
+	<key>JOperate</key>
+	<dict>
+		<key>ADVERTISINGID</key>
+		<string></string>
+		<key>ISPRODUCTION</key>
+		<string></string>
+	</dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>tencentweiboSdkv2</string>
@@ -451,19 +459,19 @@
 	<key>dcloud_uniplugins</key>
 	<array>
 		<dict>
+			<key>hooksClass</key>
+			<string>JOperateProxy</string>
 			<key>plugins</key>
 			<array>
 				<dict>
-					<key>type</key>
-					<string>module</string>
-					<key>name</key>
-					<string>JG-JOperate</string>
 					<key>class</key>
 					<string>JOperateModule</string>
+					<key>name</key>
+					<string>JG-JOperate</string>
+					<key>type</key>
+					<string>module</string>
 				</dict>
 			</array>
-			<key>hooksClass</key>
-			<string>JOperateProxy</string>
 		</dict>
 	</array>
 	<key>weixin</key>
